@@ -4,6 +4,8 @@
  */
 package com.tienda.vale.model;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -30,6 +32,7 @@ public class Carrito {
     
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "carrito")
+    @JsonIgnore  // Evita el bucle infinito
     private Cliente cliente;
     
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
