@@ -46,9 +46,5 @@ public class Carrito {
         this.cliente = cliente;
         this.productos = productos;
     }
-
-    
-
-    
     
 }
