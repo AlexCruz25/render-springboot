@@ -24,10 +24,12 @@ public class ClienteController {
     @Autowired
     private IClienteService clienteServ;
     
-    @GetMapping("cliente/traer")
+    @GetMapping("/cliente/traer")
     public List <Cliente> getClientes(){
         return clienteServ.getClientes();
     }
+    
+    
     
     @PostMapping ("/cliente/crear")
     public String saveCliente (@RequestBody Cliente cliente){
