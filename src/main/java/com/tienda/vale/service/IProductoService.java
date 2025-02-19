@@ -21,5 +21,5 @@ public interface IProductoService {
     
     public void editProducto(Long idOriginal, Long idNueva, String nuevoNombre, String descripcion, Double precio, int stock,String url);
     
-    public Producto guardarProducto(String nombre,String descripcion, double precio, int stock, Long tipoProductoId,String url);
+    public Producto guardarProducto(String nombre,String descripcion, double precio, int stock,String url, Long tipoProductoId);
 }
